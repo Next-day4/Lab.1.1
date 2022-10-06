@@ -2,11 +2,11 @@
 #include <stdlib.h>
 #include <Windows.h>
 
-#define Name "Ïåòğî"
-#define Surname "Ñè÷åâñüêèé"
-#define GroupName "ĞÅ-22"
-#define Faculty "ĞÒÔ"
-#define University "ÊÏ²"
+#define Name "ĞŸĞµÑ‚Ñ€Ğ¾"
+#define Surname "Ğ¡Ğ¸Ñ‡ĞµĞ²ÑÑŒĞºĞ¸Ğ¹"
+#define GroupName "Ğ Ğ•-22"
+#define Faculty "Ğ Ğ¢Ğ¤"
+#define University "ĞšĞŸĞ†"
 
 char Input_Name[120];
 char Input_Surname[120];
@@ -26,11 +26,11 @@ int main()
 
  system("color 5");
 
- printf("%s %s ÊÏ² ĞÒÔ ĞÅ-22", Name, Surname);
+ printf("%s %s ĞšĞŸĞ† Ğ Ğ¢Ğ¤ Ğ Ğ•-22", Name, Surname);
 
  while(1 == 1)
 {
- printf("\n ââåä³òü: ³ì'ÿ,ïğ³çâèùå,grade1,grade2,grade3,grade4,grade5:");
+ printf("\n Ğ²Ğ²ĞµĞ´Ñ–Ñ‚ÑŒ: Ñ–Ğ¼'Ñ,Ğ¿Ñ€Ñ–Ğ·Ğ²Ğ¸Ñ‰Ğµ,grade1,grade2,grade3,grade4,grade5:");
 
  scanf("%s %s %d %d %d %d %d",&Input_Name,&Input_Surname,&grade1,&grade2,&grade3,&grade4,&grade5);
 
@@ -40,4 +40,3 @@ int main()
 
   return 0;
 }
-
