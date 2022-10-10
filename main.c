@@ -1,42 +1,77 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include <Windows.h>
-
-#define Name "Петро"
-#define Surname "Сичевський"
-#define GroupName "РЕ-22"
-#define Faculty "РТФ"
-#define University "КПІ"
-
-char Input_Name[120];
-char Input_Surname[120];
-
-int grade1;
-int grade2;
-int grade3;
-int grade4;
-int grade5;
-
-double AVGmark;
-
-int main()
+#include <math.h>
+ int main()
 {
- SetConsoleOutputCP(1251);
- SetConsoleCP(1251);
+ double delta;
+ double result;
+ double x;
+ double x1;
+ double x2;
+ unsigned int N;
+ unsigned int variant;
 
- system("color 5");
+ printf("Enter variant (1 or 2)");
+ printf("\n Variant 1 means choosing count of columns");
+ printf ("\n Variant 2 means choosing step from first to second x:");
+ scanf("%d",&variant);
 
- printf("%s %s КПІ РТФ РЕ-22", Name, Surname);
-
- while(1 == 1)
+ while(variant!= 1  &&  variant!= 2)
 {
- printf("\n введіть: ім'я,прізвище,grade1,grade2,grade3,grade4,grade5:");
+ printf("Error. Please try again:");
+ scanf("%d",&variant);
+}
+ if(variant == 1)
+{
+ printf("\n Enter x1: ");
+ scanf("%lf",&x1);
+ printf("\n Enter x2: ");
+ scanf("%lf",&x2);
+ printf("\n Enter N: ");
+ scanf("%u",&N);
+ int i=1;
 
- scanf("%s %s %d %d %d %d %d",&Input_Name,&Input_Surname,&grade1,&grade2,&grade3,&grade4,&grade5);
+ printf("\n************************************************");
+ printf("\n*  N  *         X         *        F(X)        *");
+ printf("\n************************************************");
 
- AVGmark = (double)(grade1+grade2+grade3+grade4+grade5)/5;
+ delta=(x2-x1)/(N-1);
+ for(i;i<=N;i++)
+ {
+ 8*pow((x/16-4),3)-4*x-12;
+ printf("\n|%5.0d|%19.2f|%20.2f|\n",i,x1,result);
+ if(i%10==0)
+ {
+ printf("\nPress any key to continue...");
+ }
+ x1=x1+delta;
+ }
+ }
+ if(variant == 2){
 
- printf("%s %s AVG:%lf",Input_Name,Input_Surname,AVGmark);}
+ printf("\n Enter x1: ");
+ scanf("%lf",&x1);
+ printf("\n Enter x2: ");
+ scanf("%lf",&x2);
+ printf("\n  Enter delta:");
+ scanf("%lf",&delta);
+ int i=1;
 
-  return 0;
+ printf("\n************************************************");
+ printf("\n*  N  *         X         *        F(X)        *");
+ printf("\n************************************************");
+
+ while(x1<=x2)
+ {
+ 8*pow((x/16-4),3)-4*x-12;
+ printf("\n|%5.0d|%19.2f|%20.2f|\n",i,x1,result);
+ if(i%10==0)
+ {
+ printf("\nPress any key to continue...");
+ }
+ x1=x1+delta;
+ i++;
+ }
+ }
+ return 0;
 }
